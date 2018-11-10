@@ -1,11 +1,15 @@
 #include "TemperatureControl.h"
 
+
 #define MILLISECOND 1000
 
 using HRC = std::chrono::high_resolution_clock;
 
 TemperatureControl::TemperatureControl(ISimulator* sim, int frequency, double initialTemperature)
 	:simulator(sim), temperaturePeriod( MILLISECOND / frequency), currentTemperature(initialTemperature){
+
+	// Not readed yet
+	isReaded = false;
 
 	// Launch the thread
 	temperatureThread = new std::thread(&TemperatureControl::temperatureTask, this);
@@ -33,14 +37,19 @@ void TemperatureControl::temperatureTask() {
 		// Trigger ADC to take temperature value
 		this->simulator->triggerADCTemperature();
 
+		std::unique_lock<std::mutex> locker(mutexTemperature);
 		// Read the current temperature value
 		this->currentTemperature = this->simulator->readADCTemperature();
+		isReaded = true;
+		locker.unlock();
+		cv.notify_one();
+
 
 		// Turn on heater if the temperature is below C
-		if (currentTemperature < this->C)
+		if (currentTemperature <= this->C)
 			this->simulator->switchHeater(true);
 		// Turn off heater if above D
-		else if (currentTemperature > this->D)
+		else if (currentTemperature >= this->D)
 			this->simulator->switchHeater(false);
 
 		end = HRC::now();

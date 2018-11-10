@@ -11,41 +11,42 @@
 #define	CONSOLE_FREQ 2
 
 using HRC = std::chrono::high_resolution_clock;
+
 int main() {
+
+	// Change this values for different test cases
+	double initialP = 0.02;
+	double initialT = 37;
+	int executionTime = 3; // in second
 
 	HRC::time_point start, end;
 	auto elapsedTime = 0;
 
-	double initialTemperature = 20;
-	double initialPressure = 1;
-
 	start = HRC::now();
 
 	// Create simulator object
-	ISimulator *simulator = new TestSimulator(initialPressure, initialTemperature);
+	ISimulator *simulator = new TestSimulator(initialP, initialT);
 
 	// Create pressure object
 	// Send simulator and period()
-	PressureControl p_control(simulator, PRESSURE_FREQ, initialPressure);
+	PressureControl p_control(simulator, PRESSURE_FREQ, initialP);
 
 	// Create temperature object
-	TemperatureControl t_control(simulator, TEMPERATURE_FREQ, initialTemperature);
+	TemperatureControl t_control(simulator, TEMPERATURE_FREQ, initialT);
 
 	// Create console operator object
 	OperatorConsole o_control(CONSOLE_FREQ, p_control, t_control);
 
 	while (true) {
-		
+
 		end = HRC::now();
 		elapsedTime = std::chrono::duration_cast<std::chrono::seconds>(end - start).count();
 
-		if (elapsedTime >= 2)
+		if (elapsedTime >= executionTime)
 			exit(1);
 
-		
-		
 	}
-	
 
 }
+
 

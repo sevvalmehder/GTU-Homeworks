@@ -1,6 +1,8 @@
 #pragma once
 
 #include <thread>
+#include <mutex>
+#include <condition_variable>
 #include "ISimulator.h"
 
 class PressureControl
@@ -11,6 +13,14 @@ public:
 
 	// Getter for current pressure
 	double getCurrentPressure();
+
+	// This thread write to currentPressure variable
+	// and console thread read this value. We need to
+	// mutex&condition variable beware of race condition.
+	// isReaded is for control
+	std::mutex mutexPressure;
+	std::condition_variable cv;
+	bool isReaded;
 
 	// Destructor
 	~PressureControl();

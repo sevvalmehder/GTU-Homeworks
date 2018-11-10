@@ -1,6 +1,5 @@
 #include "PressureControl.h"
 #include <thread>
-#include <iostream>
 #include <mutex>
 
 #define MILLISECOND 1000
@@ -10,6 +9,9 @@ using HRC = std::chrono::high_resolution_clock;
 
 PressureControl::PressureControl(ISimulator* sim, int frequency, double initialPressure)
 	:simulator(sim), pressurePeriod(MILLISECOND / frequency), currentPressure(initialPressure){
+
+	// Not readed yet
+	isReaded = false;
 
 	// Launch a thread for pressure control
 	pressureThread = new std::thread(&PressureControl::pressureTask, this);
@@ -38,8 +40,12 @@ void PressureControl::pressureTask() {
 		// Trigger ADC to take pressure value
 		this->simulator->triggerADCPressure();
 
+		std::unique_lock<std::mutex> locker(mutexPressure);
 		// Read the current pressure value to the currentPressure variable
 		this->currentPressure = this->simulator->readADCPressure();
+		isReaded = true;
+		locker.unlock();
+		cv.notify_one();
 
 		// Control operation
 		if (this->currentPressure < 0.9)
@@ -55,7 +61,7 @@ void PressureControl::pressureTask() {
 
 		// Calculate the elapsed time and sleep for period-elapsedTime
 		auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-		std::this_thread::sleep_for( std::chrono::milliseconds(pressurePeriod - elapsedTime));
+		std::this_thread::sleep_for( std::chrono::milliseconds(1000000000000));
 
 		
 	}

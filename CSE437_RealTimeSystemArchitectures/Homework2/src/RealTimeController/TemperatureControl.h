@@ -2,6 +2,8 @@
 
 #include "ISimulator.h"
 #include <thread>
+#include <mutex>
+#include <condition_variable>
 
 class TemperatureControl
 {
@@ -11,6 +13,14 @@ public:
 
 	// Getter for current temperature
 	double getCurrentTemperature();
+
+	// This thread write to currentTemperature variable
+	// and console thread read this value. We need to
+	// mutex&condition variable beware of race condition.
+	// isReaded is for control
+	std::mutex mutexTemperature;
+	std::condition_variable cv;
+	bool isReaded;
 
 	// Destructor
 	~TemperatureControl();
