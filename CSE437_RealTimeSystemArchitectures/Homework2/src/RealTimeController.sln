@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RealTimeController", "RealTimeController\RealTimeController.vcxproj", "{65EDA4DB-D124-4B66-A7F5-A785C0FAB643}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65EDA4DB-D124-4B66-A7F5-A785C0FAB643}.Debug|x64.ActiveCfg = Debug|x64
+		{65EDA4DB-D124-4B66-A7F5-A785C0FAB643}.Debug|x64.Build.0 = Debug|x64
+		{65EDA4DB-D124-4B66-A7F5-A785C0FAB643}.Debug|x86.ActiveCfg = Debug|Win32
+		{65EDA4DB-D124-4B66-A7F5-A785C0FAB643}.Debug|x86.Build.0 = Debug|Win32
+		{65EDA4DB-D124-4B66-A7F5-A785C0FAB643}.Release|x64.ActiveCfg = Release|x64
+		{65EDA4DB-D124-4B66-A7F5-A785C0FAB643}.Release|x64.Build.0 = Release|x64
+		{65EDA4DB-D124-4B66-A7F5-A785C0FAB643}.Release|x86.ActiveCfg = Release|Win32
+		{65EDA4DB-D124-4B66-A7F5-A785C0FAB643}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0DA749A4-1C32-4D2C-A544-280ACA4C974C}
+	EndGlobalSection
+EndGlobal
