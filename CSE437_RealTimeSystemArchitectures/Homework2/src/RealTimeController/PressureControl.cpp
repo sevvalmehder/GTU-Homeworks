@@ -61,7 +61,7 @@ void PressureControl::pressureTask() {
 
 		// Calculate the elapsed time and sleep for period-elapsedTime
 		auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-		std::this_thread::sleep_for( std::chrono::milliseconds(1000000000000));
+		std::this_thread::sleep_for( std::chrono::milliseconds(pressurePeriod - elapsedTime));
 
 		
 	}

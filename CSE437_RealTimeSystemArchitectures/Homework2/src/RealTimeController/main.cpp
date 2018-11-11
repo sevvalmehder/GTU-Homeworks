@@ -37,6 +37,7 @@ int main() {
 	// Create console operator object
 	OperatorConsole o_control(CONSOLE_FREQ, p_control, t_control);
 
+	// Run until given executionTime end
 	while (true) {
 
 		end = HRC::now();
