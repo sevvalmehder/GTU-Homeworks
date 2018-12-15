@@ -1,0 +1,41 @@
+Creat a directory for kernel and patch
+mkdir Kernel
+cd Kernel
+
+Select kernel version
+http://cdn.kernel.org/pub/linux/kernel/
+
+Download the selected kernel
+wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.14.1.tar.xz
+
+Select the patch as long as its kernel version and major revision same
+http://cdn.kernel.org/pub/linux/kernel/projects/rt/
+
+Download the selected patch
+http://cdn.kernel.org/pub/linux/kernel/projects/rt/4.14/older/patch-4.14.1-rt3.patch.gz
+
+Extract the kernel content
+tar xvf linux-4.14.1.tar.xz
+cd linux-4.14.1/
+
+Unzip the kernel patch and patch it with -pnum options
+-p0 gives the entire file name unmodified and -p1 gives without leading slash
+gzip -cd ../patch-4.14.1-rt3.patch.gz 
+zcat ../patch-4.14.1-rt3.patch.gz | patch -p1
+
+requires ncurses and openssl
+sudo apt-get install libncurses5-dev libncursesw5-dev
+sudo apt-get install libssl-dev
+
+Load the existing configuration of your system
+make menuconfig
+
+
+Select Fully Preemptible Kernel
+Processor type and features > Preemption Model(Valuntary Kernel Preemption(Desktop)) >
+Fully Preemptible Kernel(RT)
+
+********Stackover flows??*******
+
+Compile the kernel modules
+make
