@@ -91,6 +91,6 @@ Linux sevval-rtos 4.14.1-rt3 #1 SMP PREEMPT RT Sat Dec 15 23:15:11 EET 2018 x86_
 ```
 
 14. Testing  
-
+When 2 threads run at real-time priority level 10 in process 7836
 ![When 2 threads run at real-time priority level 10 in process 7836 ](test.jpg)
 
