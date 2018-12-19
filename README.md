@@ -16,4 +16,4 @@
 			CSE312 Operating Systems(C++)  
 * 7th semester:  
 			[CSE437 Real Time System Architectures(C++11)](CSE437_RealTimeSystemArchitectures/)  
-			CSE484 Introduction to Natural Language and Speech Processing  
+			[CSE484 Introduction to Natural Language and Speech Processing](NaturalLanguageProcessing/)  
