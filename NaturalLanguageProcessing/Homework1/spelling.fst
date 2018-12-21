@@ -23,10 +23,10 @@ $R3$ = ($cons$? $vowel$)? $cons$ $cons$ <->:<> $cons$ $vowel$ $cons$? (<->:<> $c
 $R1R3$ = $R1$ $R3$ 
 
 % R3 follows R2 for example "ab-dest-ha-ne"
-$R2R3$ = $vowel$ $cons$ <->:<> $R3$
+$R2R3$ = $vowel$ $cons$ <->:<> $cons$ $R3$
 
 % Combine them
 $Rules$ = $R1$ | $R2$ | $R3$ | $R1R3$ | $R2R3$
 
 %Combine all of them
-$Rules$ | $single_syllable$ 
+$Rules$ | $single_syllable$  
