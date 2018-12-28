@@ -4,7 +4,16 @@ This is a program that spells the Turkish words. [SFST](http://www.cis.uni-muenc
 A short manual and a tutorial included in the source code package.
 
 ## Quick start
-
-$ fst-compiler ex.fst ex.a  
+```
+$ fst-compiler spelling.fst spelling.a  
 $ fst-mor ex.a  
 analyze >  
+```
+## Test
+Compile your fst before using this test according to quick start part. Use dataset.txt for test document.  
+
+After execute python test file with your final state transducer:
+```
+$ python testFST.py yourFST.a
+```
+there will be an output.txt file for spelled results.
