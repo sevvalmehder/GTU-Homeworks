@@ -1,4 +1,0 @@
-1. Eğer test datasında bulunan ngram, train datada yoksa --> Smoothing
-2. Smoothing uygulanmasına ihtiyaç olduğunu bilebilmek için bir tablo şart(mı ?)
-3. Test ve train işlemleri için iki farklı program oluşturulması
-	3.1. Ya da train ve test için iki ayrı class oluşturulması
