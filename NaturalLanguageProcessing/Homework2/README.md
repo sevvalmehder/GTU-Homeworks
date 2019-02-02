@@ -3,8 +3,8 @@
 This is a program that counts the character and spell ngrams in given corpus. 
 Then calculates the probability and perplexity of given sentence.  
 
-wiki_00 can be used as corpus for character ngrams.
-
+wiki_00 can be used as corpus for character ngrams.  
+wiki_00_spelled.txt can be used as corpus for spell ngrams.
 ## Train
 
 Train the corpus with this command according to characters. After this command executed, charNgrams.json must be created. This json file include the ngrams and their counts.
