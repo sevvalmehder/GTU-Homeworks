@@ -11,7 +11,7 @@
 * 5th semester:  
 			CSE341 Programming Languages(Clojure & Prolog)  
 			[CSE331 Computer Organization(Verilog VHDL & MIPS Assembly)](https://github.com/sevvalmehder/32-bit-MIPS-Processor)  
-			CSE321 Introduction to Algorithm Design(Python)  
+			[CSE321 Introduction to Algorithm Design(Python)](IntroductionToAlgorithmDesign/)  
 * 6th semester:  
 			[CSE312 Operating Systems(C++)](https://github.com/sevvalmehder/Simple-Operating-System) 
 * 7th semester:  
