@@ -10,10 +10,10 @@
 			CSE244 System Programming (C)  
 * 5th semester:  
 			CSE341 Programming Languages(Clojure & Prolog)  
-			CSE331 Computer Organization(Verilog VHDL & MIPS Assembly)  
+			[CSE331 Computer Organization(Verilog VHDL & MIPS Assembly)](https://github.com/sevvalmehder/32-bit-MIPS-Processor)  
 			CSE321 Introduction to Algorithm Design(Python)  
 * 6th semester:  
-			CSE312 Operating Systems(C++)  
+			[CSE312 Operating Systems(C++)](https://github.com/sevvalmehder/Simple-Operating-System) 
 * 7th semester:  
 			[CSE437 Real Time System Architectures(C++11)](CSE437_RealTimeSystemArchitectures/)  
 			[CSE484 Introduction to Natural Language and Speech Processing](NaturalLanguageProcessing/)  
