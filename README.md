@@ -15,5 +15,7 @@
 * 6th semester:  
 			[CSE312 Operating Systems(C++)](https://github.com/sevvalmehder/Simple-Operating-System) 
 * 7th semester:  
-			[CSE437 Real Time System Architectures(C++11)](CSE437_RealTimeSystemArchitectures/)  
+			[CSE437 Real Time System Architectures(C++11)](RealTimeSystemArchitectures/)  
 			[CSE484 Introduction to Natural Language and Speech Processing](NaturalLanguageProcessing/)  
+* 8th semester:
+			[CSE463 Introduction to Computer Vision(Python&C++)](IntroductionToComputerVision/)
