@@ -1,0 +1,1 @@
+This homework is an exercise for practicing Prolog. There are 4 part for homework. All parts is detailed in Homework_2_v2.pdf. 
