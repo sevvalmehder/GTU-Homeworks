@@ -1,0 +1,3 @@
+In this project, various functions are implemented for encoding and decoding a sequence of words using a cipler splhabet in Clojure. There is a detailed information about homework in [Homework_1.pdf](Homework_1.pdf).  
+
+I used Clojure with JetBrains Intellij IDE. There is a really quick Clojure introduction in [here](https://clojure.org/guides/learn/syntax). And [this](https://medium.com/@ertu.ctn/neden-clojure-1367365464ae) is a great article titled "Why Clojure" in Turkish.
