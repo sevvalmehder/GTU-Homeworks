@@ -9,7 +9,7 @@
 			CSE222 Data Structures and Algorithms(Java)  
 			CSE244 System Programming (C)  
 * 5th semester:  
-			CSE341 Programming Languages(Clojure & Prolog)  
+			[CSE341 Programming Languages(Clojure & Prolog)](ProgrammingLanguages/)  
 			[CSE331 Computer Organization(Verilog VHDL & MIPS Assembly)](https://github.com/sevvalmehder/32-bit-MIPS-Processor)  
 			[CSE321 Introduction to Algorithm Design(Python)](IntroductionToAlgorithmDesign/)  
 * 6th semester:  
