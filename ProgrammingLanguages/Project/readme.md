@@ -1,0 +1,2 @@
+This is a lexical analyzer for coffee language which has a description in [CoffeLanguage_Syntax.pdf](CoffeLanguage_Syntax.pdf) file. All the details are mentioned in this file such as keywords, operators, how to define variable, is binding static or dynamic etc.  
+This lexer does the tokenization of a given Coffee program in [sample file](CoffeeSample.coffee).The output of the program is token list in the given file.
