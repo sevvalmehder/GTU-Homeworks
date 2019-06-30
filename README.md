@@ -18,4 +18,5 @@
 			[CSE437 Real Time System Architectures(C++11)](RealTimeSystemArchitectures/)  
 			[CSE484 Introduction to Natural Language and Speech Processing](NaturalLanguageProcessing/)  
 * 8th semester:  
-			[CSE463 Introduction to Computer Vision(Python&C++)](IntroductionToComputerVision/)
+			[CSE463 Introduction to Computer Vision(Python&C++)](IntroductionToComputerVision/)  
+			[CSE422 - Theory of Computation](https://github.com/sevvalmehder/Tur2Spell)
