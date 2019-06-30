@@ -7,7 +7,7 @@
 			CSE241 Object Oriented Programming(C++ & Java)  
 * 4th semester:  
 			CSE222 Data Structures and Algorithms(Java)  
-			CSE244 [System Programming (C)](SystemProgramming/)  
+			[CSE244 System Programming (C)](SystemProgramming/)  
 * 5th semester:  
 			[CSE341 Programming Languages(Clojure & Prolog)](ProgrammingLanguages/)  
 			[CSE331 Computer Organization(Verilog VHDL & MIPS Assembly)](https://github.com/sevvalmehder/32-bit-MIPS-Processor)  
